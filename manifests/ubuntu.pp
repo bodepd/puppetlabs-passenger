@@ -13,7 +13,7 @@
 #
 # Sample Usage:
 #
-class passenger {
+class passenger::ubuntu {
   include passenger::params
   require ruby::dev
   require apache
