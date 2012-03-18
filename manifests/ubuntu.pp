@@ -15,14 +15,16 @@
 #
 class passenger::ubuntu {
   require ruby::dev
-  require apache
+
+  Class['passenger::ubuntu'] ~> Service['httpd']
 
   package { ['libapache2-mod-passenger', 'rails', 'librack-ruby']:
-    ensure => ensure
+    ensure => ensure,
   }
 
   a2mod { 'headers':
-    ensure => present,
+    ensure  => present,
+    require => Package['httpd'],
   }
 
 }
