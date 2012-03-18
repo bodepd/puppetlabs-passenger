@@ -14,14 +14,11 @@
 # Sample Usage:
 #
 class passenger::ubuntu {
-  include passenger::params
   require ruby::dev
   require apache
 
-  $version=$passenger::params::version
-
   package { ['libapache2-mod-passenger', 'rails', 'librack-ruby']:
-    ensure => $version
+    ensure => ensure
   }
 
   a2mod { 'headers':
