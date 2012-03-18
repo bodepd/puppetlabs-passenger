@@ -19,7 +19,7 @@ class passenger::ubuntu {
   Class['passenger::ubuntu'] ~> Service['httpd']
 
   package { ['libapache2-mod-passenger', 'rails', 'librack-ruby']:
-    ensure => ensure,
+    ensure => present,
   }
 
   a2mod { 'headers':
