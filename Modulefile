@@ -7,5 +7,5 @@ summary 'Puppet module for Passenger'
 description 'Module for Passenger configuration'
 project_page 'https://github.com/puppetlabs/puppetlabs-passenger'
 
-dependency 'puppetlabs/apache', '>= 0.0.3'
+dependency 'puppetlabs/apache', '>= 0.2.2'
 dependency 'puppetlabs/ruby', '>= 0.0.1'
